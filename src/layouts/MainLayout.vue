@@ -6,10 +6,7 @@
 
 <script>
 export default {
-  name: 'MainLayout',
-  mounted () {
-    console.log('wrapper layout')
-  }
+  name: 'MainLayout'
 }
 </script>
 
