@@ -19,6 +19,7 @@ export default {
     @import "~bulma/sass/utilities/all";
     @import "~bulma/sass/components/tabs";
     .b-tabs {
+        z-index: 2;
         width: 100%;
         justify-content: center;
     }

@@ -2,6 +2,7 @@
     <div id="app">
         <MainLayout>
             <header>
+                <img src="./assets/Pampers_Logo.png" alt="" class="logo">
                 <tabs></tabs>
             </header>
             <div class="columns category">
@@ -47,7 +48,7 @@
                         <h2 class="products__title">11+ кг</h2>
                     </div>
                 </div>
-                <div class="column products products--mobile">
+                <div class="column is-12 products products--mobile">
                     <hooper>
                         <slide>
                             <div class="products__item">
@@ -178,6 +179,7 @@
                     <hooper-pagination slot="hooper-addons"></hooper-pagination>
                 </hooper>
             </div>
+            <!--<iframe src="http://localhost:8081/src/3d/img3d_000211.html" frameborder="0" height="200px" width="200px"></iframe>-->
         </MainLayout>
     </div>
 </template>
@@ -229,10 +231,16 @@ export default {
 
     header {
         background: url("./assets/header_bg.png");
-        height: 117px;
+        background-size: cover;
+        height: 130px;
         display: flex;
         justify-content: center;
         align-items: flex-end;
+    }
+    .logo {
+        top: -15px;
+        width: 140px;
+        display: none;
     }
 
     .columns {
@@ -270,9 +278,27 @@ export default {
         }
         .products--mobile {
             display: flex;
+            padding: 0;
         }
         .products.products--mobile .hooper-track {
             align-items: center;
+        }
+    }
+    @media (max-width: 768px) {
+        header {
+            position: relative;
+            background-position-x: center;
+        }
+        .logo {
+            z-index: 1;
+            position: absolute;
+            display: inline-block;
+        }
+        .category__item {
+            max-width: 250px;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
